@@ -16,3 +16,38 @@ All config is moved to .env file
 
 ## How to use?
 
+**Clone it from github**
+```
+git clone https://github.com/iSmartyPRO/docker-wvpn.git
+```
+
+**Enter to folder and prepare env file**
+```
+cd docker-wvpn
+cp .env-sample .env
+```
+
+**Update env file with your details**
+
+**Run your WireGuard App**
+```
+docker-compose up -d
+```
+
+### Using WireGuard on Windows
+
+**Install using Chocolatey**
+
+```
+choco install wireguard -y
+```
+
+**Run WireGuard as Service**
+```
+& 'C:\Program Files\WireGuard\wireguard.exe' /installtunnelservice 'C:\Program Files\WireGuard\Data\youConfig.conf'
+```
+
+**Uninstall WireGuard Service**
+```
+& 'C:\Program Files\WireGuard\wireguard.exe' /uninstalltunnelservice 'configName'
+```
